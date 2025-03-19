@@ -1,0 +1,23 @@
+def remove_duplicates(sorted_list):
+    if not sorted_list:
+        return 0
+
+    unique_list = [sorted_list[0]]
+    duplicate_count = 0
+
+    for i in range(1, len(sorted_list)):
+        if sorted_list[i] != sorted_list[i - 1]:
+            unique_list.append(sorted_list[i])
+        else:
+            duplicate_count += 1
+
+
+    sorted_list[:] = unique_list
+
+    return duplicate_count
+
+
+sorted_numbers = [1, 1, 2, 2, 3, 4, 4, 4, 5]
+removed_count = remove_duplicates(sorted_numbers)
+print(f"Number of duplicates removed: {removed_count}")
+print(f"List after removing duplicates: {sorted_numbers}")
