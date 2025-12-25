@@ -1,5 +1,6 @@
-"""This is my file.
-But put here your code please
-instead of this text
-and send me a pull request
-so I will be able to review your code"""
+def check_power(power, base):
+    if power <= 0 and base <= 1:
+        return False
+    while power % base == 0:
+        power = power // base
+    return power == 1
