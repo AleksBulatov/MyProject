@@ -1,5 +1,7 @@
-"""This is my file.
-But put here your code please
-instead of this text
-and send me a pull request
-so I will be able to review your code"""
+def count_inversions(lst):
+    count = 0
+    for i in range(len(lst)):
+        for j in range(i + 1, len(lst)):
+            if lst[i] > lst[j]:
+                count += 1
+    return count
