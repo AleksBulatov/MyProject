@@ -1,5 +1,10 @@
-"""This is my file.
-But put here your code please
-instead of this text
-and send me a pull request
-so I will be able to review your code"""
+def invertion(list):
+    count = 0
+    for i in range (len(list)):
+        for j in range(i, len(list)):
+            if list[i] > list [j]:
+                count += 1
+    return count
+
+lst = []
+print(invertion(lst))
