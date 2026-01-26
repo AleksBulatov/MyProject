@@ -1,5 +1,12 @@
-"""This is my file.
-But put here your code please
-instead of this text
-and send me a pull request
-so I will be able to review your code"""
+def count_inverssions(lst):
+    n = len(lst)
+    inversions = 0
+
+    for i in range(n):
+        for j in range (i+1, n):
+            if lst[i] > lst[j]:
+                inversions += 1
+
+    return inversions
+lst = [2, 4, 1, 3, 5]
+print(count_inversions(lst))
